@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="static/css/display.css" />
+    <title>Public News Droid</title>
+  </head>
+  <body>
+    <h1>Result</h1>
+    <div class="container-fluid">
+      <div class="child">
+        <form action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <p>Author Name</p>
+          <input type="text" value="{{Name}}" class="form-control" />
+          <br />
+          <p>Article Text</p>
+          <textarea
+            type="text"
+            value="{{Comments}}"
+            rows="10"
+            class="form-control"
+          >
+{{Comments}}</textarea
+          >
+          <br />
+          <p>Text Sentiment</p>
+          <input type="text" value="{{Sentiment}}" class="form-control" />
+          <br />
+          <p>Image Sentiment</p>
+          <input type="text" value="{{imgSentiment}}" class="form-control" />
+        </form>
+      </div>
+      <div class="child">
+        <img src="static/{{img}}Result.jpg" alt="My image" />
+      </div>
+    </div>
+    <footer class="footer">Group-29</footer>
+  </body>
+</html>
